@@ -4,12 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inheritance
+namespace Ex28_template
 {
-    class Person:Animal
+    internal class Person: Creature
     {
-        public Person(DateTime bd, string n, float w = 0, float h = 0, float d = 0) : base(bd, n, w, h, d)
+        public int _lifespan;
+        public int _age;
+        public int Age
         {
+            get { return _age; }
+        }
+        public int LifeSpan
+        {
+            get { return _lifespan; }
+        }
+
+        public Person(int age, int lifespan, DateTime birthday, string name, float width, float height, float depth, float weight) : base(birthday, name, width, height, depth, weight)
+        {
+            _age = age;
+            _lifespan = lifespan;
         }
     }
 }

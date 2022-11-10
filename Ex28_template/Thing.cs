@@ -4,23 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inheritance
+namespace Ex28_template
 {
-    /// <summary>
-    /// 物体
-    /// </summary>
     class Thing
     {
-        readonly public string name;
-        public float width;
-        public float height;
-        public float depth;
-        public Thing(string n = null,float w = 0,float h =0,float d=0 )
+        readonly public string _name;
+        public float _weight;
+        public float _width;
+        public float _height;
+        public float _depth;
+        public string Name
         {
-            name = n;
-            width = w;
-            height = h;
-            depth = d;
+            get { return _name; }
+        }
+        public float Weight
+        {
+            get { return _weight; }
+        }
+        public float Width
+        {
+            get { return _width; }
+        }
+        public float Height
+        {
+            get { return _height; }
+        }
+        public float Depth
+        {
+            get { return _depth; }
+        }
+        public Thing(string name = "", float width = 0, float height = 0, float depth = 0, float weight = 0)
+        {
+            this._name = name;
+            this._weight = weight;
+            this._width = width;
+            this._height = height;
+            this._depth = depth;
         }
     }
 }
